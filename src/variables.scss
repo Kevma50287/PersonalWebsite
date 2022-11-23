@@ -1,0 +1,19 @@
+@use "sass:map";
+
+$bg-color: #242424;
+$text-color: rgba(255, 255, 255, 0.87);
+$button-color: #646cff;
+$button-hover-color: aquamarine;
+$button-bg-color: #1a1a1a;
+$button-bg-hover-color: rgb(65, 65, 65);
+
+$breakpoints: (
+  xs: 350px,
+  sm: 560px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  2xl: 1400px,
+  3xl: 1980px,
+  4xl: 2560px,
+);

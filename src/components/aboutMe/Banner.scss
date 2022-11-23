@@ -1,0 +1,121 @@
+@import "../../mixins.scss";
+
+@function generate-offset(){
+  $value: 100vw * 5%;
+  @return $value;
+}
+
+#banner {
+  margin: 1rem 0px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  .dot {
+    animation: puff-in-center 0.7s cubic-bezier(0.47, 0, 0.745, 0.715) 3.8s
+      both;
+    height: 0.65rem;
+    width: 0.65rem;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  h1 {
+    margin: 0px;
+  }
+  @include breakpoint(xs, sm) {
+    @for $i from 1 to 5 {
+      $delay: $i * 0.75s;
+      $offset: 100vw / 25 * ($i - 1);
+      h1:nth-child(#{$i}) {
+        height: 25%;
+        padding-left: $offset;
+        animation: slide-in-left
+          0.75s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          $delay
+          both;
+        width: fit-content;
+      }
+    }
+  }
+  @include breakpoint(sm, md) {
+    @for $i from 1 to 5 {
+      $delay: $i * 0.75s;
+      $offset: 100vw / 10 * ($i - 1);
+      h1:nth-child(#{$i}) {
+        height: 25%;
+        padding-left: $offset;
+        animation: slide-in-left
+          0.75s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          $delay
+          both;
+        width: fit-content;
+      }
+    }
+  }
+  @include breakpoint(md, lg) {
+    @for $i from 1 to 5 {
+      $delay: $i * 0.75s;
+      $offset: 100vw / 7 * ($i - 1);
+      h1:nth-child(#{$i}) {
+        font-size: 2.5rem;
+        height: 25%;
+        padding-left: $offset;
+        animation: slide-in-left
+          0.75s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          $delay
+          both;
+        width: fit-content;
+      }
+    }
+  }
+  @include breakpoint(lg, 4xl) {
+    @for $i from 1 to 5 {
+      $delay: $i * 0.75s;
+      $offset: 100vw / 5 * ($i - 1);
+      h1:nth-child(#{$i}) {
+        font-size: 3rem;
+        height: 25%;
+        padding-left: $offset;
+        animation: slide-in-left
+          0.75s
+          cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          $delay
+          both;
+        width: fit-content;
+      }
+    }
+  }
+}
+
+@include keyframes-animation(slide-in-left) {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@include keyframes-animation(puff-in-center) {
+  0% {
+    -webkit-transform: scale(4);
+    transform: scale(4);
+    -webkit-filter: blur(0.5px);
+    filter: blur(1px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}

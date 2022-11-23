@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+@mixin breakpoint($breakpointmin:xs, $breakpointmax:4xl) {
+  //check if the supplied breakpoint exists in our breakpoints map
+  @if map-has-key($breakpoints, $breakpointmin) and map-has-key($breakpoints, $breakpointmax) {
+    $breakpoint-min-value: map-get($breakpoints, $breakpointmin);
+    $breakpoint-max-value: map-get($breakpoints, $breakpointmax);
+
+    @media (min-width: $breakpoint-min-value) and (max-width: $breakpoint-max-value) {
+      @content;
+    }
+
+    // use the custom value if the breakpoint is not part of the pre-defined list
+  } @else {
+    @media (min-width: $breakpointmin) and (max-width: $breakpointmax) {
+      @content;
+    }
+  }
+}
+
+@mixin keyframes-animation($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
