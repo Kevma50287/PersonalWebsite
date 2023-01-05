@@ -15,9 +15,9 @@ const Banner = () => {
         </h1>
       </div>
       <div className="image-container">
-        <img src="src/assets/pic1.jpg" alt="canyon selfie" />
-        <img src="src/assets/pic2.jpg" alt="suit selfie" />
-        <img src="src/assets/pic3.jpg" alt="dancers" />
+        <img src="/images/pic1.jpg" alt="canyon selfie" />
+        <img src="/images/pic2.jpg" alt="suit selfie" />
+        <img src="/images/pic3.jpg" alt="dancers" />
       </div>
     </>
   );
