@@ -1,7 +1,7 @@
 import React from "react";
 import "./projects.scss";
-import GitHubLogo from "../../assets/icons8-github.svg";
-import YoutubeLogo from "../../assets/icons8-youtube.svg";
+import GitHubLogo from "/assets/icons8-github.svg";
+import YoutubeLogo from "/assets/icons8-youtube.svg";
 
 const ProjectCard = ({ props }) => {
   const { name, github, demo, description, technologies } = props;

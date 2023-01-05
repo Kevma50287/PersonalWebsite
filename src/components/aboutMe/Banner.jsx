@@ -1,5 +1,8 @@
 import React from "react";
 import "./Banner.scss";
+import image1 from "/assets/images/pic1.jpg";
+import image2 from "/assets/images/pic2.jpg";
+import image3 from "/assets/images/pic3.jpg";
 
 const Banner = () => {
   return (
@@ -15,9 +18,9 @@ const Banner = () => {
         </h1>
       </div>
       <div className="image-container">
-        <img src="/images/pic1.jpg" alt="canyon selfie" />
-        <img src="/images/pic2.jpg" alt="suit selfie" />
-        <img src="/images/pic3.jpg" alt="dancers" />
+        <img src={image1} alt="canyon selfie" />
+        <img src={image2} alt="suit selfie" />
+        <img src={image3} alt="dancers" />
       </div>
     </>
   );
