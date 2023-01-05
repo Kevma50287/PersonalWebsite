@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .project-card-wrapper {
   width: 25vw;
   height: 400px;
@@ -8,12 +10,42 @@
   box-shadow: 5px 5px 10px rgb(6, 6, 6);
 }
 
+#projects {
+  padding-top: $navbar-offset;
+}
+
 #card-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
 }
 
 .tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 3px;
   margin: 3px;
+  border-radius: 5px;
+  border: 1px solid aquamarine;
 }
+
+.project-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-container {
+  display: flex;
+  height: 100%;
+  justify-content: flex-end;
+  justify-items: flex-end;
+  align-items: flex-end;
+}
+
+.logo {
+  &:hover {
+    scale: 1.3;
+    transition: all 0.25s ease-out
+  }
+}
+

@@ -1,0 +1,19 @@
+@import "../../mixins.scss";
+@import "../../variables.scss";
+
+#contact {
+  a {
+    margin: 0px 0px 1rem 0px;
+    padding: 0.5rem;
+    border: 1px solid $button-color;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.25s ease-out;
+    &:hover{
+      color:$button-hover-color;
+      border-color: $button-hover-color;
+      background-color: $button-bg-hover-color;
+    }
+  }
+}

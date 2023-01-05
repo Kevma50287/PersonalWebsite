@@ -90,6 +90,38 @@
   }
 }
 
+img {
+  @include breakpoint(xs, sm) {
+    width: auto;
+    height: auto;
+  }
+  @include breakpoint(sm, md) {
+    width: 100%;
+    height: auto;
+  }
+  @include breakpoint(md, 4xl) {
+    width: 30%;
+    height: auto;
+    margin: 0px 10px;
+  }
+}
+
+.image-container {
+  position: relative;
+  opacity: 0;
+  animation: fade-in 1s ease-in 4.5s forwards;
+}
+
+@include keyframes-animation(fade-in){
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 @include keyframes-animation(slide-in-left) {
   0% {
     -webkit-transform: translateX(-1000px);

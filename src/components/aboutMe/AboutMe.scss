@@ -1,3 +1,10 @@
-h1{
+@import "../../mixins.scss";
+@import "../../variables.scss";
+
+#aboutme {
+  padding-top: $navbar-offset;
+}
+h1 {
   width: fit-content;
 }
+

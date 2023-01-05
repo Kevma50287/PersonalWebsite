@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.scss";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -8,17 +7,13 @@ import AboutMe from "./components/aboutMe/AboutMe";
 
 function App() {
   return (
-    <>
-      <body>
-        <div className="App">
-          <Header />
-          <Banner />
-          <AboutMe />
-          <Projects />
-          <Footer />
-        </div>
-      </body>
-    </>
+      <div className="App">
+        <Header />
+        <Banner />
+        <AboutMe />
+        <Projects />
+        <Footer />
+      </div>
   );
 }
 

@@ -1,5 +1,9 @@
 @import "./variables.scss";
 
+.App {
+  padding-top: $navbar-offset;
+}
+
 .gradient-highlight {
   background-image: linear-gradient(90deg, aquamarine, $text-color);
   -webkit-background-clip: text;

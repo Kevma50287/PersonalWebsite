@@ -26,7 +26,7 @@ const Projects = () => {
     },
   ]
 
-  const projectsArray = allProjects.map(e => <ProjectCard props={e} />)
+  const projectsArray = allProjects.map((e, i) => <ProjectCard props={e} key={i} />)
 
   return (
     <div id="projects">
