@@ -1,10 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Banner.scss";
 import image1 from "/assets/images/pic1.jpg";
 import image2 from "/assets/images/pic2.jpg";
 import image3 from "/assets/images/pic3.jpg";
 
 const Banner = () => {
+  const textArray = [
+    "Lifetime Learner",
+    "Dancer",
+    "Hiker",
+    "Tech Enthusiast",
+    "Creative Thinker",
+    "Collaborator",
+    "Traveller",
+    "Gamer",
+    "Visionary",
+  ];
+  const arrayCount = textArray.length;
+
+  const [index, setIndex] = useState(null);
+  useEffect(() => {
+    const increment = () => {
+      if (index != arrayCount - 1) {
+        const newIndex = index + 1;
+        setIndex(newIndex);
+      } else {
+        setIndex(0);
+      }
+    };
+
+    // const timer = setTimeout(() => {
+    //   const interval = setInterval(increment, 3000)
+    // }, 5000)
+
+    const timer = setTimeout(increment, 3000);
+    // return () => clearTimeout(timer)
+  }, [index]);
+
   return (
     <>
       <div id="banner">
@@ -14,7 +46,8 @@ const Banner = () => {
         <h1>Software Engineer, </h1>
         <h1>Former Auditor,</h1>
         <h1>
-          and Life-Time Learner <span className="dot"></span>
+          and <div className={index != null ? 'word' : ''}>{textArray[index]}</div>{" "}
+          <span className="dot"></span>
         </h1>
       </div>
       <div className="image-container">

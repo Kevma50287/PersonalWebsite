@@ -4,6 +4,14 @@
 #aboutme {
   padding-top: $navbar-offset;
 }
+
+.aboutme-content{
+  background-color: black;
+  border-radius: 25px;
+  padding: 1px 25px;
+  margin: 10px;
+  box-shadow: 5px 5px 10px rgb(6, 6, 6);
+}
 h1 {
   width: fit-content;
 }

@@ -5,12 +5,17 @@ const AboutMe = () => {
   return (
     <div id="aboutme">
       <br></br>
+      
+      <div className="aboutme-content">
+
       <h1 className="gradient-highlight">About Me</h1>
       <p>
-        Hello! My name is Kevin Ma, and I am passionate and driven about
-        learning and creating all things related to tech, with a current focus
-        on front-end web development and backend unit integration testing.
+        Hello! My name is Kevin Ma, and I am passionate, New York based bootcamp graduate with a current focus
+        on front-end web development and backend unit integration testing. I am currently open for full-time job opportunities and potential personal project collaborations. If you are interested please contact me using the information listed below.
       </p>
+
+      <br></br>
+      <h1 className="gradient-highlight">Background</h1>
       <p>
         My first programming experience came from high school, in which I took a
         computer science course that revolved around NetLogo. I recall being
@@ -29,7 +34,6 @@ const AboutMe = () => {
         Master's in Accounting degree and became a licensed CPA. Worked for
         mid-size and Big 4 accounting firms, and volunteered for the IRS.
       </p>
-      <p>But it felt empty.</p>
       <p>
         It was the safe path to a stable life my parents wanted for me, but I
         felt like I was a zombie; mindlessly wandering through life on a
@@ -48,7 +52,7 @@ const AboutMe = () => {
         hoping to learn new skills in order to create solutions, websites, and
         applications that can benefit those people around me.
       </p>
-      <p>I started this transition on March 31, 2022</p>
+      <p>I started this transition on March 31, 2022.</p>
       <p>
         Since then I have completed the Flatiron School Software Engineering
         BootCamp and have learned:
@@ -63,6 +67,7 @@ const AboutMe = () => {
         <li>SQL and PostgreSQL</li>
         <li>Java and Java Spring Boot</li>
       </ul>
+      </div>
     </div>
   );
 };

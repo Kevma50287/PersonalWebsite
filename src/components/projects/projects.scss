@@ -1,22 +1,30 @@
 @import "../../variables.scss";
+@import "../../mixins.scss";
 
 .project-card-wrapper {
   width: 25vw;
   height: 400px;
-  background-color: black;
+  background-color: rgb(55, 55, 55);
   border-radius: 25px;
   padding: 0px 25px;
   margin: 10px;
   box-shadow: 5px 5px 10px rgb(6, 6, 6);
+  min-width: 250px;
 }
+
 
 #projects {
   padding-top: $navbar-offset;
 }
 
 #card-container{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    @include breakpoint(xs, sm){
+      margin: 0;
+    }
 }
 
 .tag {

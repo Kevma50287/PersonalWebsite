@@ -1,5 +1,5 @@
 @import "../../mixins.scss";
-
+@import "../../variables.scss";
 @function generate-offset(){
   $value: 100vw * 5%;
   @return $value;
@@ -19,6 +19,24 @@
     border-radius: 50%;
     display: inline-block;
   }
+
+  
+  .word {
+    animation: 3s linear infinite openclose forwards;
+    display: inline-block;
+    max-width: fit-content;
+    background-color: $bg-color;
+
+    //Overflow text is invisible
+    overflow: hidden;
+
+    // Add White-Space nowrap to prevent text from wrapping to next line
+    white-space: nowrap;
+
+    // Inline Block text was misaligned with other text in div - they are rendered differently. Add vertical align bottom to correct
+    vertical-align: bottom;
+  }
+
   h1 {
     margin: 0px;
   }
@@ -92,7 +110,7 @@
 
 img {
   @include breakpoint(xs, sm) {
-    width: auto;
+    width: 300px;
     height: auto;
   }
   @include breakpoint(sm, md) {
@@ -110,6 +128,7 @@ img {
   position: relative;
   opacity: 0;
   animation: fade-in 1s ease-in 4.5s forwards;
+  text-align: center;
 }
 
 @include keyframes-animation(fade-in){
@@ -149,5 +168,23 @@ img {
     -webkit-filter: blur(0px);
     filter: blur(0px);
     opacity: 1;
+  }
+}
+
+@include keyframes-animation(openclose) {
+  0% {
+    width: 0px;
+  }
+  10% {
+    width: 0px;
+  }
+  75% {
+    width: 100%;
+  }
+  90% {
+    width: 0px;
+  }
+  100% {
+    width: 0px;
   }
 }
