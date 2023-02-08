@@ -21,28 +21,27 @@ const AboutMe = () => {
         computer science course that revolved around NetLogo. I recall being
         enamored by the endless possibilities and the puzzle-like magical code
         one had to peice together, like casting a magic spell that suddenly made
-        a bunch of turtle and polygons take shape and action. However, I was
-        intimidated by my peers who had the innate aptitude or intellect for
-        programming as they created wildly fantastical worlds and proejcts I
-        never thought possible. Meanwhile, I found writing a simple recursive
-        function difficult. Although I enjoyed the challenge, and the jolt of
+        a bunch of turtle and polygons take shape and action. It allows me to created a fantastical virtual world with my own rules. 
+        However, it wasn't at all easy - things like dynamic programming, recursions, debugging, considering all the avenues for base cases and how someone might break my code - was hard. 
+        Despite the hardships though, I enjoyed the challenge, and the jolt of
         euphoria when one finally corrects that one bug or have a function
-        working properly, I simply held the thought that 'I wasn't good enough'.
+        working properly. 
       </p>
       <p>
+        As like many teenagers graduating high school, I still had no idea what I wanted in my life or career.
         So I went to college and graduate school at SUNY Binghamton. Got a
-        Master's in Accounting degree and became a licensed CPA. Worked for
-        mid-size and Big 4 accounting firms, and volunteered for the IRS.
+        Master's in Accounting degree and became a licensed CPA because it was what I was good at - documentation, technical writing, math, Miscrosoft Excel, etc. 
+        I worked for mid-size and Big 4 accounting firms, and volunteered for the IRS.
       </p>
       <p>
-        It was the safe path to a stable life my parents wanted for me, but I
-        felt like I was a zombie; mindlessly wandering through life on a
-        predetermined track, just half-living. Literally. Half the year -
-        October through April - I worked 80-100 hour weeks and the other half I
-        did barely 20 hours.
+        It was the safe path to a stable life my parents wanted for me, and it paid the bills. The work wasn't too difficult and the job paid well - I made great friends, connections, and became exposed to 
+        the little intricacies and practices companies used to turn a profit, or what kind of investments many funds found profitable. Being able to
+        dive deep into large quantities of data, nitpicking tiny details, trying to understand what, when, and why some transaction occurred was something I found interesting.
+        However, the more I worked in the field, the more I realized that the most satisfaction I gained was when I dealing directly with the data itself, extracting, transforming, loading the data, creating macros on excel to automate calculations and tedious procedures
+        and also generating insights into how to better optimize the audit process to save time and preserve or enhance quality.
       </p>
       <p>
-        And one day I really thought to myself - What was it that I used to do
+        And one day as I worked I recalled that feeling I had in computer science class - What was it that I used to do
         that made me feel happy and gave me an eagerness to continue learning,
         face new problems and challenges, and find inspiration?
       </p>
