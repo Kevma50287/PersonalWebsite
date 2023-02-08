@@ -34,16 +34,11 @@ const AboutMe = () => {
         I worked for mid-size and Big 4 accounting firms, and volunteered for the IRS.
       </p>
       <p>
-        It was the safe path to a stable life my parents wanted for me, and it paid the bills. The work wasn't too difficult and the job paid well - I made great friends, connections, and became exposed to 
-        the little intricacies and practices companies used to turn a profit, or what kind of investments many funds found profitable. Being able to
-        dive deep into large quantities of data, nitpicking tiny details, trying to understand what, when, and why some transaction occurred was something I found interesting.
-        However, the more I worked in the field, the more I realized that the most satisfaction I gained was when I dealing directly with the data itself, extracting, transforming, loading the data, creating macros on excel to automate calculations and tedious procedures
-        and also generating insights into how to better optimize the audit process to save time and preserve or enhance quality.
-      </p>
-      <p>
-        And one day as I worked I recalled that feeling I had in computer science class - What was it that I used to do
-        that made me feel happy and gave me an eagerness to continue learning,
-        face new problems and challenges, and find inspiration?
+        It was the safe path to a stable life my parents wanted for me that just happened to work out. The job itself wasn't too difficult and paid well - I made great friends, connections, and became exposed to 
+        the little intricacies and practices companies used to turn a profit. Being able to
+        dive deep into large quantities of data, nitpicking tiny details, trying to understand what, when, and why some transaction occurred was fun.
+        However, the more I worked in the field, the more I realized that the most satisfaction I gained was when I dealt directly with the data itself. Extracting, transforming, loading the data, creating macros on excel to automate calculations and tedious procedures,
+        and generating insights into how to better optimize the audit process to save time and preserve or enhance quality - that was satisfying.
       </p>
       <p>
         With the support of my invaluable friends and family I quit my old job
