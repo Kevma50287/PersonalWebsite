@@ -1,5 +1,6 @@
 import React from "react";
 import "./header.scss";
+import Switch from "../Switch/Switch";
 
 const Header = () => {
   return (
@@ -9,6 +10,7 @@ const Header = () => {
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <Switch/>
     </div>
   );
 };

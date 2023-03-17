@@ -15,7 +15,7 @@
       both;
     height: 0.65rem;
     width: 0.65rem;
-    background-color: #fff;
+    // background-color: #fff;
     border-radius: 50%;
     display: inline-block;
   }
@@ -25,7 +25,7 @@
     animation: 3s linear infinite openclose forwards;
     display: inline-block;
     max-width: fit-content;
-    background-color: $bg-color;
+    // background-color: $bg-color;
 
     //Overflow text is invisible
     overflow: hidden;
