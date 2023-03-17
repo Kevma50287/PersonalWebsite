@@ -80,6 +80,10 @@ a {
   #header {
     background-color: black;
   }
+
+  .dot {
+    background-color: white;
+  }
 }
 
 .light {
@@ -96,5 +100,9 @@ a {
   }
   a:hover {
     color: $a-hover-color-dark;
+  }
+
+  .dot {
+    background-color: black;
   }
 }
