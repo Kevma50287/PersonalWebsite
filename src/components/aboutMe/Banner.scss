@@ -22,8 +22,8 @@
 
   
   .word {
-    animation: 3s linear infinite openclose forwards;
     display: inline-block;
+    width: 0px;
     max-width: fit-content;
     // background-color: $bg-color;
 
@@ -126,10 +126,21 @@ img {
 }
 
 .image-container {
+  display: flex;
   position: relative;
   opacity: 0;
   animation: fade-in 1s ease-in 4.5s forwards;
   text-align: center;
+  padding: 3rem;
+}
+
+.image-container img {
+  flex:1;
+  object-fit: contain;
+}
+
+.openclose-animation {
+  animation: 3s linear infinite openclose forwards;
 }
 
 @include keyframes-animation(fade-in){
@@ -176,14 +187,8 @@ img {
   0% {
     width: 0px;
   }
-  10% {
-    width: 0px;
-  }
-  75% {
+  65% {
     width: 100%;
-  }
-  90% {
-    width: 0px;
   }
   100% {
     width: 0px;
