@@ -44,7 +44,7 @@ const Banner = () => {
           Hi, <span className="highlight">I'm Kevin Ma!</span>
         </h1>
         <h1>Software Engineer, </h1>
-        <h1>Former Auditor,</h1>
+        <h1>Senior Auditor & CPA,</h1>
         <h1>
           and <div className={index != null ? 'word' : ''}>{textArray[index]}</div>{" "}
           <span className="dot"></span>
