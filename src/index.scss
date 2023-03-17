@@ -21,15 +21,9 @@ html {
   min-width: 350px;
 }
 
-
-// a {
-//   font-weight: 500;
-//   color: #646cff;
-//   text-decoration: inherit;
-// }
-// a:hover {
-//   color: #535bf2;
-// }
+#header {
+  border-bottom:1px solid black;
+}
 
 body {
   margin: 0;
@@ -54,19 +48,15 @@ button {
   transition: border-color 0.25s;
 }
 
-a {
-  text-decoration: none;
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-// button:hover {
-//   border-color: $button-hover-color;
-//   color: $button-hover-color;
-// }
-
-// button:focus,
-// button:focus-visible {
-//   outline: 4px auto -webkit-focus-ring-color;
-// }
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
 
 // DARK MODE
 
@@ -79,14 +69,9 @@ a {
     color: $button-hover-color-dark;
   }
   
-  button:focus,
-  button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-  }
   a {
-    font-weight: 500;
     color: $button-color-dark;
-    border: 1px solid $button-color-dark
+    border: 1px solid $button-color-dark;
   }
   a:hover {
     color: $a-hover-color-dark;
@@ -103,11 +88,9 @@ a {
 
   #header {
     background-color: white;
-    border-bottom:1px solid black;
   }
 
   a {
-    font-weight: 500;
     color: $button-color-dark;
     border: 1px solid $button-color-dark
   }
