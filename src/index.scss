@@ -74,15 +74,21 @@ a {
     border: 1px solid $button-color-dark;
   }
   a:hover {
-    color: $a-hover-color-dark;
+    color:$button-hover-color-dark;
+    border-color: $button-hover-color-dark;
+    background-color: $button-bg-hover-color-dark;
   }
 
-  #header {
+  #header, .aboutme-content, .general-container {
     background-color: black;
   }
 
   .dot {
     background-color: white;
+  }
+
+  .gradient-highlight{
+    background-image: $gradient-color-dark;
   }
 }
 
@@ -90,7 +96,12 @@ a {
   background-color: $bg-color-light;
   color: black;
 
-  #header {
+  button:hover {
+    border-color: $button-hover-color-light;
+    color: $button-hover-color-light;
+  }
+
+  #header, .aboutme-content, .general-container {
     background-color: white;
   }
 
@@ -99,10 +110,16 @@ a {
     border: 1px solid $button-color-dark
   }
   a:hover {
-    color: $a-hover-color-dark;
+    color:$button-hover-color-light;
+    border-color: $button-hover-color-light;
+    background-color: $button-bg-hover-color-light;
   }
 
   .dot {
     background-color: black;
+  }
+
+  .gradient-highlight{
+    background-image: $gradient-color-light;
   }
 }

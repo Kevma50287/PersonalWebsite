@@ -5,8 +5,27 @@
   @return $value;
 }
 
+.image-container {
+  display: flex;
+  position: relative;
+  opacity: 0;
+  animation: fade-in 1s ease-in 4.5s forwards;
+  text-align: center;
+  padding: 3rem;
+}
+
+.image-container img {
+  flex:1;
+  object-fit: contain;
+}
+
+.openclose-animation {
+  animation: 3s linear infinite openclose forwards;
+}
+
 #banner {
   margin: 2rem 0px;
+  padding: 0px 3rem;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -42,6 +61,7 @@
   }
 
   @include breakpoint(xs, sm) {
+
     @for $i from 1 to 5 {
       $delay: $i * 0.75s;
       $offset: calc(100vw / 25) * ($i - 1);
@@ -58,6 +78,7 @@
     }
   }
   @include breakpoint(sm, md) {
+
     @for $i from 1 to 5 {
       $delay: $i * 0.75s;
       $offset: calc(100vw / 10) * ($i - 1);
@@ -109,6 +130,50 @@
   }
 }
 
+.image-container {
+  display: flex;
+  position: relative;
+  opacity: 0;
+  animation: fade-in 1s ease-in 4.5s forwards;
+  text-align: center;
+  padding: 3rem;
+  @include breakpoint(xs, sm) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 300px;
+      height: auto;
+    }
+  }
+  @include breakpoint(sm, md) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    img {
+      text-align: center;
+      width: 300px;
+      height: auto;
+    }
+  }
+  @include breakpoint(md, 4xl) {
+    flex:1;
+    flex-direction: row;
+    gap: 2rem;
+    img {
+      width: 30%;
+      height: auto;
+      margin: 0px 10px;
+    }
+  }
+  
+}
+
+.image-container img {
+  object-fit: contain;
+}
+
 img {
   @include breakpoint(xs, sm) {
     width: 300px;
@@ -123,24 +188,6 @@ img {
     height: auto;
     margin: 0px 10px;
   }
-}
-
-.image-container {
-  display: flex;
-  position: relative;
-  opacity: 0;
-  animation: fade-in 1s ease-in 4.5s forwards;
-  text-align: center;
-  padding: 3rem;
-}
-
-.image-container img {
-  flex:1;
-  object-fit: contain;
-}
-
-.openclose-animation {
-  animation: 3s linear infinite openclose forwards;
 }
 
 @include keyframes-animation(fade-in){

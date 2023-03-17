@@ -9,6 +9,7 @@ $button-hover-color-dark: aquamarine;
 $a-hover-color-dark: #535bf2;
 $button-bg-color-dark: #1a1a1a;
 $button-bg-hover-color-dark: rgb(65, 65, 65);
+$gradient-color-dark: linear-gradient(90deg, aquamarine, $text-color-dark);
 
 
 // Light Mode Colors
@@ -16,8 +17,10 @@ $bg-color-light: white;
 $text-color-light: rgba(0, 0, 0, 0.87);
 $button-color-light: #646cff;
 $button-hover-color-light: aquamarine;
+$a-hover-color-light: #535bf2;
 $button-bg-color-light: #1a1a1a;
 $button-bg-hover-color-light: rgb(65, 65, 65);
+$gradient-color-light: linear-gradient(90deg, aquamarine, $text-color-dark);
 
 
 $breakpoints: (
