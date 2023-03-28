@@ -1,5 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import thumbnail1 from "../../images/thumbnail1.png"
+import thumbnail3 from "../../images/thumbnail3.png"
 
 const Projects = () => {
   const allProjects = [
@@ -10,6 +12,7 @@ const Projects = () => {
       description:
         "First ever programming project - Simple pokedex and Who's That Pokemon? game using the Pokemon API",
       technologies: ["JS", "CSS", "HTML"],
+      thumbnail:thumbnail1
     },
     {
       name: "WonderHouseSupply",
@@ -23,6 +26,7 @@ const Projects = () => {
         "Material UI",
         "JSON Server",
       ],
+      thumbnail:["https://giphy.com/embed/fB8IkMC2tJ58xDsNOS", "https://giphy.com/gifs/fB8IkMC2tJ58xDsNOS"]
     },
     {
       name: "Yumo/BulletJournal",
@@ -37,6 +41,7 @@ const Projects = () => {
         "TypeScript",
         "Axios",
       ],
+      thumbnail:thumbnail3
     },
   ];
 
