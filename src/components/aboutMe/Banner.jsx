@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Banner.scss";
-import image1 from "/assets/images/pic1.jpg";
-import image2 from "/assets/images/pic2.jpg";
-import image3 from "/assets/images/pic3.jpg";
+import imagesArray from "../../images";
 
 const Banner = () => {
   const textArray = [
@@ -17,10 +15,12 @@ const Banner = () => {
     "Visionary",
   ];
   const arrayCount = textArray.length;
-
+  const wordDiv = useRef(null)
   const [index, setIndex] = useState(null);
+
   useEffect(() => {
     const increment = () => {
+      wordDiv.current.classList.add("openclose-animation")
       if (index != arrayCount - 1) {
         const newIndex = index + 1;
         setIndex(newIndex);
@@ -29,12 +29,26 @@ const Banner = () => {
       }
     };
 
-    // const timer = setTimeout(() => {
-    //   const interval = setInterval(increment, 3000)
-    // }, 5000)
+    // We want to increment the index every 3.5 seconds
+    const timer = (ms) => {
+      setTimeout(increment, ms)
+    }
 
-    const timer = setTimeout(increment, 3000);
-    // return () => clearTimeout(timer)
+    // for the wordDiv we want the animation to slowly reveal the word over the course of 3 seconds and pause for .5seconds
+    // use a setTimeoutPromise that resolves after 3 seconds, then we toggle the aniamiton off
+
+    const animationTimeoutPromise = async (ms) => {
+      return new Promise(resolve => setTimeout(resolve, ms))
+    }
+
+    const clearAnimation = async(ms) => {
+      await animationTimeoutPromise(ms)
+      wordDiv.current.classList.remove("openclose-animation")
+    }
+
+    timer(3200)
+    clearAnimation(3000)
+    
   }, [index]);
 
   return (
@@ -44,16 +58,14 @@ const Banner = () => {
           Hi, <span className="highlight">I'm Kevin Ma!</span>
         </h1>
         <h1>Software Engineer, </h1>
-        <h1>Former Auditor,</h1>
+        <h1>Senior Auditor & CPA,</h1>
         <h1>
-          and <div className={index != null ? 'word' : ''}>{textArray[index]}</div>{" "}
+          and <div ref={wordDiv} className="word openclose-animation">{textArray[index]}</div>{" "}
           <span className="dot"></span>
         </h1>
       </div>
       <div className="image-container">
-        <img src={image1} alt="canyon selfie" />
-        <img src={image2} alt="suit selfie" />
-        <img src={image3} alt="dancers" />
+        {imagesArray.map((imageLink, index) => <img className="banner-image" src={imageLink} key={index} alt="canyon selfie" />)}
       </div>
     </>
   );

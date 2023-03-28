@@ -9,32 +9,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: $bg-color;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
-  
 }
 
 html {
   min-width: 350px;
 }
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+
+#header {
+  border-bottom:1px solid black;
 }
 
 body {
   margin: 0;
-  padding: 1rem;
   min-width: 350px;
   min-height: 100vh;
 }
@@ -43,7 +35,6 @@ h1 {
   font-size: 2rem;
   line-height: 1.1;
 }
-
 
 button {
   border-radius: 8px;
@@ -56,11 +47,111 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
-  border-color: $button-hover-color;
-  color: $button-hover-color;
-}
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.App, #header, .aboutme-content, .general-container, .project-card-wrapper {
+  transition: background-color linear 0.5s;
+}
+// DARK MODE
+
+.dark {
+  background-color: $bg-color-dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  button:hover {
+    border-color: $button-hover-color-dark;
+    color: $button-hover-color-dark;
+  }
+  
+  nav a, .download-link {
+    color: $button-color-dark;
+    border: 1px solid $button-color-dark;
+  }
+  nav a:hover, .download-link:hover {
+    color:$button-hover-color-dark;
+    border-color: $button-hover-color-dark;
+    background-color: $button-bg-hover-color-dark;
+  }
+
+  #header, .aboutme-content, .general-container, .project-card-wrapper {
+    background-color: black;
+  }
+
+  .project-card-wrapper {
+    box-shadow: 0px 0px 20px white;
+  }
+
+  .dot {
+    background-color: white;
+  }
+
+  .gradient-highlight{
+    background-image: $gradient-color-dark;
+  }
+  
+  .highlight {
+    color: $gradient-color-dark;
+    filter: drop-shadow(0.5rem 0.5rem 20px rgb(104, 210, 175));
+  }
+
+  .tag {
+    border: 1px solid $button-hover-color-dark;
+  }
+
+
+}
+
+.light {
+  background-color: $bg-color-light;
+  color: black;
+
+  button:hover {
+    border-color: $button-hover-color-light;
+    color: $button-hover-color-light;
+  }
+
+  #header, .aboutme-content, .general-container, .project-card-wrapper {
+    background-color: whitesmoke;
+  }
+
+  nav a, .download-link {
+    color: $button-color-dark;
+    border: 1px solid $button-color-dark
+  }
+  nav a:hover, .download-link:hover {
+    color:$button-hover-color-light;
+    border-color: $button-hover-color-light;
+    background-color: $button-bg-hover-color-light;
+  }
+
+  .dot {
+    background-color: black;
+  }
+
+  .project-card-wrapper {
+    box-shadow: 0px 0px 20px $a-hover-color-dark;
+    background-color: whitesmoke;
+  }
+
+  .gradient-highlight{
+    background-image: $gradient-color-light;
+  }
+  
+  .highlight {
+    color: $button-color-light;
+    filter: drop-shadow(0.5rem 0.5rem 20px $a-hover-color-dark);
+  }
+
+  .tag {
+    border: 1px solid $a-hover-color-light;
+  }
 }

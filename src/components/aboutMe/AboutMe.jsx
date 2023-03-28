@@ -34,7 +34,7 @@ const AboutMe = () => {
         I worked for mid-size and Big 4 accounting firms, and volunteered for the IRS.
       </p>
       <p>
-        It was the safe path to a stable life my parents wanted for me that just happened to work out. The job itself wasn't too difficult and paid well - I made great friends, connections, and became exposed to 
+        The job itself wasn't too difficult and paid well - I made great friends, connections, and became exposed to 
         the little intricacies and practices companies used to turn a profit. Being able to
         dive deep into large quantities of data, nitpicking tiny details, trying to understand what, when, and why some transaction occurred was fun.
         However, the more I worked in the field, the more I realized that the most satisfaction I gained was when I dealt directly with the data itself. Extracting, transforming, loading the data, creating macros on excel to automate calculations and tedious procedures,

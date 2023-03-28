@@ -5,8 +5,27 @@
   @return $value;
 }
 
+.image-container {
+  display: flex;
+  position: relative;
+  opacity: 0;
+  animation: fade-in 1s ease-in 4.5s forwards;
+  text-align: center;
+  padding: 3rem;
+}
+
+.image-container .banner-image {
+  flex:1;
+  object-fit: contain;
+}
+
+.openclose-animation {
+  animation: 3s linear infinite openclose forwards;
+}
+
 #banner {
-  margin: 1rem 0px;
+  margin: 2rem 0px;
+  padding: 0px 3rem;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -15,17 +34,17 @@
       both;
     height: 0.65rem;
     width: 0.65rem;
-    background-color: #fff;
+    // background-color: #fff;
     border-radius: 50%;
     display: inline-block;
   }
 
   
   .word {
-    animation: 3s linear infinite openclose forwards;
     display: inline-block;
+    width: 0px;
     max-width: fit-content;
-    background-color: $bg-color;
+    // background-color: $bg-color;
 
     //Overflow text is invisible
     overflow: hidden;
@@ -40,10 +59,12 @@
   h1 {
     margin: 0px;
   }
-  @include breakpoint(xs, sm) {
+
+  @include breakpoint(xxs, sm) {
+
     @for $i from 1 to 5 {
       $delay: $i * 0.75s;
-      $offset: 100vw / 25 * ($i - 1);
+      $offset: calc(100vw / 25) * ($i - 1);
       h1:nth-child(#{$i}) {
         height: 25%;
         padding-left: $offset;
@@ -57,9 +78,10 @@
     }
   }
   @include breakpoint(sm, md) {
+
     @for $i from 1 to 5 {
       $delay: $i * 0.75s;
-      $offset: 100vw / 10 * ($i - 1);
+      $offset: calc(100vw / 10) * ($i - 1);
       h1:nth-child(#{$i}) {
         height: 25%;
         padding-left: $offset;
@@ -75,7 +97,7 @@
   @include breakpoint(md, lg) {
     @for $i from 1 to 5 {
       $delay: $i * 0.75s;
-      $offset: 100vw / 7 * ($i - 1);
+      $offset: calc(100vw / 7) * ($i - 1);
       h1:nth-child(#{$i}) {
         font-size: 2.5rem;
         height: 25%;
@@ -92,7 +114,7 @@
   @include breakpoint(lg, 4xl) {
     @for $i from 1 to 5 {
       $delay: $i * 0.75s;
-      $offset: 100vw / 5 * ($i - 1);
+      $offset: calc(100vw / 5) * ($i - 1);
       h1:nth-child(#{$i}) {
         font-size: 3rem;
         height: 25%;
@@ -108,8 +130,52 @@
   }
 }
 
-img {
-  @include breakpoint(xs, sm) {
+.image-container {
+  display: flex;
+  position: relative;
+  opacity: 0;
+  animation: fade-in 1s ease-in 4.5s forwards;
+  text-align: center;
+  padding: 3rem;
+  @include breakpoint(xxs, sm) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .banner-image {
+      width: 300px;
+      height: auto;
+    }
+  }
+  @include breakpoint(sm, md) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    .banner-image {
+      text-align: center;
+      width: 300px;
+      height: auto;
+    }
+  }
+  @include breakpoint(md, 4xl) {
+    flex:1;
+    flex-direction: row;
+    gap: 2rem;
+    .banner-image {
+      width: 30%;
+      height: auto;
+      margin: 0px 10px;
+    }
+  }
+  
+}
+
+.image-container .banner-image {
+  object-fit: contain;
+}
+
+.banner-image {
+  @include breakpoint(xxs, sm) {
     width: 300px;
     height: auto;
   }
@@ -122,13 +188,6 @@ img {
     height: auto;
     margin: 0px 10px;
   }
-}
-
-.image-container {
-  position: relative;
-  opacity: 0;
-  animation: fade-in 1s ease-in 4.5s forwards;
-  text-align: center;
 }
 
 @include keyframes-animation(fade-in){
@@ -175,14 +234,8 @@ img {
   0% {
     width: 0px;
   }
-  10% {
-    width: 0px;
-  }
-  75% {
+  65% {
     width: 100%;
-  }
-  90% {
-    width: 0px;
   }
   100% {
     width: 0px;
