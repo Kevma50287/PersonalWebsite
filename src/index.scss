@@ -58,6 +58,9 @@ a {
   text-decoration: none;
 }
 
+.App, #header, .aboutme-content, .general-container, .project-card-wrapper {
+  transition: background-color linear 0.5s;
+}
 // DARK MODE
 
 .dark {
@@ -69,18 +72,22 @@ a {
     color: $button-hover-color-dark;
   }
   
-  a {
+  nav a, .download-link {
     color: $button-color-dark;
     border: 1px solid $button-color-dark;
   }
-  a:hover {
+  nav a:hover, .download-link:hover {
     color:$button-hover-color-dark;
     border-color: $button-hover-color-dark;
     background-color: $button-bg-hover-color-dark;
   }
 
-  #header, .aboutme-content, .general-container {
+  #header, .aboutme-content, .general-container, .project-card-wrapper {
     background-color: black;
+  }
+
+  .project-card-wrapper {
+    box-shadow: 0px 0px 20px white;
   }
 
   .dot {
@@ -90,6 +97,17 @@ a {
   .gradient-highlight{
     background-image: $gradient-color-dark;
   }
+  
+  .highlight {
+    color: $gradient-color-dark;
+    filter: drop-shadow(0.5rem 0.5rem 20px rgb(104, 210, 175));
+  }
+
+  .tag {
+    border: 1px solid $button-hover-color-dark;
+  }
+
+
 }
 
 .light {
@@ -101,15 +119,15 @@ a {
     color: $button-hover-color-light;
   }
 
-  #header, .aboutme-content, .general-container {
-    background-color: white;
+  #header, .aboutme-content, .general-container, .project-card-wrapper {
+    background-color: whitesmoke;
   }
 
-  a {
+  nav a, .download-link {
     color: $button-color-dark;
     border: 1px solid $button-color-dark
   }
-  a:hover {
+  nav a:hover, .download-link:hover {
     color:$button-hover-color-light;
     border-color: $button-hover-color-light;
     background-color: $button-bg-hover-color-light;
@@ -119,7 +137,21 @@ a {
     background-color: black;
   }
 
+  .project-card-wrapper {
+    box-shadow: 0px 0px 20px $a-hover-color-dark;
+    background-color: whitesmoke;
+  }
+
   .gradient-highlight{
     background-image: $gradient-color-light;
+  }
+  
+  .highlight {
+    color: $button-color-light;
+    filter: drop-shadow(0.5rem 0.5rem 20px $a-hover-color-dark);
+  }
+
+  .tag {
+    border: 1px solid $a-hover-color-light;
   }
 }

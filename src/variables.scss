@@ -20,11 +20,12 @@ $button-hover-color-light: aquamarine;
 $a-hover-color-light: #535bf2;
 $button-bg-color-light: #1a1a1a;
 $button-bg-hover-color-light: rgb(65, 65, 65);
-$gradient-color-light: linear-gradient(90deg, aquamarine, $text-color-dark);
+$gradient-color-light: linear-gradient(90deg, $button-color-light, $text-color-light);
 
 
 $breakpoints: (
-  xs: 320px,
+  xxs: 320px,
+  xs: 400px,
   sm: 560px,
   md: 768px,
   lg: 1024px,

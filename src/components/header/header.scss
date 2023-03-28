@@ -1,4 +1,6 @@
 @import "../../variables.scss";
+@import "../../mixins.scss";
+
 #header {
   display: flex;
   justify-content: space-between;
@@ -25,11 +27,26 @@
       transition: all 0.25s ease-out;
     }
   }
+  @include breakpoint(xxs, xs) {
+    position: relative;
+    height: auto;
+    flex-direction: column;
+    .brand-logo {
+      display: none;
+    }
+    nav {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      a {
+        margin: 5px;
+        width: 100px;
+      }
+    }
+    .toggle-switch {
+      margin: auto;
+    }
+  }
 }
 
-.logo {
-  margin-left: 3rem;
-  object-fit: contain;
-  height: 100%;
-  width: auto;
-}
+

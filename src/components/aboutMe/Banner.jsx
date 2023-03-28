@@ -65,7 +65,7 @@ const Banner = () => {
         </h1>
       </div>
       <div className="image-container">
-        {imagesArray.map((imageLink, index) => <img src={imageLink} key={index} alt="canyon selfie" />)}
+        {imagesArray.map((imageLink, index) => <img className="banner-image" src={imageLink} key={index} alt="canyon selfie" />)}
       </div>
     </>
   );

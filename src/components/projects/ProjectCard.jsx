@@ -20,11 +20,11 @@ const ProjectCard = ({ props }) => {
         <div>{techArray}</div>
 
         <div className="icon-container">
-          <a href={`${github}`}>
-            <img className="logo" src={GitHubLogo} alt="Github Logo" />
+          <a className="project-card-link" href={`${github}`}>
+            <img className="project-card-link-img" src={GitHubLogo} alt="Github Logo" />
           </a>
-          <a href={`${demo}`}>
-            <img className="logo" src={YoutubeLogo} alt="Youtube Logo" />
+          <a className="project-card-link" href={`${demo}`}>
+            <img className="project-card-link-img" src={YoutubeLogo} alt="Youtube Logo" />
           </a>
         </div>
       </div>

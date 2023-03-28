@@ -14,7 +14,7 @@
   padding: 3rem;
 }
 
-.image-container img {
+.image-container .banner-image {
   flex:1;
   object-fit: contain;
 }
@@ -60,7 +60,7 @@
     margin: 0px;
   }
 
-  @include breakpoint(xs, sm) {
+  @include breakpoint(xxs, sm) {
 
     @for $i from 1 to 5 {
       $delay: $i * 0.75s;
@@ -137,11 +137,11 @@
   animation: fade-in 1s ease-in 4.5s forwards;
   text-align: center;
   padding: 3rem;
-  @include breakpoint(xs, sm) {
+  @include breakpoint(xxs, sm) {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    img {
+    .banner-image {
       width: 300px;
       height: auto;
     }
@@ -151,7 +151,7 @@
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    img {
+    .banner-image {
       text-align: center;
       width: 300px;
       height: auto;
@@ -161,7 +161,7 @@
     flex:1;
     flex-direction: row;
     gap: 2rem;
-    img {
+    .banner-image {
       width: 30%;
       height: auto;
       margin: 0px 10px;
@@ -170,12 +170,12 @@
   
 }
 
-.image-container img {
+.image-container .banner-image {
   object-fit: contain;
 }
 
-img {
-  @include breakpoint(xs, sm) {
+.banner-image {
+  @include breakpoint(xxs, sm) {
     width: 300px;
     height: auto;
   }

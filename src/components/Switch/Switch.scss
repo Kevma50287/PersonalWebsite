@@ -1,70 +1,86 @@
-// .switch {
-//   // position: absolute;
-//   // display: inline-block;
-//   // top:25px;
-//   // right: 32px;
-//   // width: 60px;
-//   // height: 34px;
-// }
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  // position: absolute;
-  display: block;
-  width: 5rem;
-  height:50%;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.slider:before {
+.toggle-switch {
   position: relative;
-  display: block;
-  content: "";
-  height: 1.8rem;
-  width: 1.8rem;
-  top: 3.5px;
-  left: 11px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(2rem);
-  -ms-transform: translateX(2rem);
-  transform: translateX(2rem);
-}
-
-.slider.round {
-  border-radius: 1.8rem;
-}
-
-.slider.round:before {
-  // display:block;
-  // height: 2rem;
-  // width: 2rem;
-  border-radius: 50%;
-  background-color: white;
+  width: 100px;
+  padding: 13px 10px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  text-align: left;
+  &-checkbox {
+    display: none;
+  }
+  &-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0 solid #bbb;
+    border-radius: 20px;
+    margin: 0px;
+  }
+  &-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+    &:before,
+    &:after {
+      display: block;
+      float: left;
+      width: 50%;
+      height: 34px;
+      padding: 0;
+      line-height: 34px;
+      font-size: 14px;
+      color: white;
+      font-weight: bold;
+      box-sizing: border-box;
+    }
+    &:before {
+      content: "DARK";
+      text-transform: uppercase;
+      padding-left: 10px;
+      background-color: #f90;
+      color: #fff;
+    }
+  }
+  &-disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+    &:before {
+      background-color: #ddd;
+      cursor: not-allowed;
+    }
+  }
+  &-inner:after {
+    content: "LIGHT";
+    text-transform: uppercase;
+    padding-right: 10px;
+    background-color: #bbb;
+    color: #fff;
+    text-align: right;
+  }
+  &-switch {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin: 18px 15px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 55%;
+    border: 0 solid #bbb;
+    border-radius: 20px;
+    transition: all 0.3s ease-in 0s;
+  }
+  &-checkbox:checked + &-label {
+    .toggle-switch-inner {
+      margin-left: 0;
+    }
+    .toggle-switch-switch {
+      right: 0px;
+    }
+  }
 }
